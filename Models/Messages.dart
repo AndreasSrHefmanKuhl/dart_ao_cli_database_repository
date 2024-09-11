@@ -14,7 +14,8 @@ abstract class Messages {
   });
 
   String get message;
+  void sendMsg() {}
+  void recvMsg() {}
   void reply(String replyContent);
-
   void editMessage(String newContent) {}
 }
