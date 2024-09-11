@@ -14,7 +14,7 @@ Map<String, User> profile = {};
 void registry(name,password) 
 
 
-/*void registerUser(String username, String password) {
+void registerUser(String username, String password) {
   if (profile.containsKey(username)) {
     print('Benutzername bereits vergeben.');
     return;
@@ -22,7 +22,7 @@ void registry(name,password)
 
   profile[username] = User(username, password);
   print('Benutzer erfolgreich registriert.');
-}*/
+}
 
 /*bool loginUser(name, password) {
   User? user = profile[name];
