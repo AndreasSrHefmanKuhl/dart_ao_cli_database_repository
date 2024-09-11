@@ -18,7 +18,3 @@ class User {
 }
 
 Map<String, User> profile = {};
-
-void botChat(userInp) {}
-void register(name, lastName, password, birthday, email) {}
-void logIn(email, password) {}
