@@ -1,7 +1,9 @@
 import 'dart:io';
 import 'dart:core';
 import 'bot kopie.dart';
-import 'login_user Kopie.dart';
+import 'Data/login_user.dart';
+import 'Data/registry.dart';
+import 'Models/User.dart';
 
 void main() {
 // login User zum Anlegen eines Profils
