@@ -57,7 +57,9 @@ class Bot  {
     "Kennst du die Antwort auf alle Fragen?",
   ];
 
-  void botChat (userInp) {while Bot.isBotRun {
+  void botChat (userInp) 
+  
+   {while {Bot.isBotRun} {
     //String userInp = stdin.readLineSync()!.toString();
 
     if (userInp.contains("beende") || userInp.contains("Beende")) {
@@ -75,9 +77,9 @@ class Bot  {
       print("Das Wetter ist heute schön, oder?");
       print("Dumm ist der, der dummes tut ; )... mein lieber Freund! ");
     } else if (actives.any((element) => userInp.contains(element))) {
-      print(
+      print("Ich stricke am liebsten in meiner Freizeit! Die Ruhe und die Ausgeglichenheit dabei");
+
     } else if (dumb.any((element) => userInp.contains(element))) {
-          "Ich stricke am liebsten in meiner Freizeit! Die Ruhe und die Ausgeglichenheit dabei");
     } else if (sense.any((element) => userInp.contains(element))) {
       print("42!");
     } else {
