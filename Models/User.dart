@@ -11,6 +11,10 @@ class User {
       required this.password,
       required this.birthday,
       required this.email});
+
+  void botChat(userInp) {}
+  void register(name, lastName, password, birthday, email) {}
+  void logIn(email, password) {}
 }
 
 Map<String, User> profile = {};
