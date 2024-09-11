@@ -1,6 +1,12 @@
 import 'dart:io';
 
-bot(String userInp) {
+class Bot  {
+  String userInp ;
+  bool isBotRun;
+  Bot({required this.userInp, this.isBotRun = true});
+
+
+ void botFace(){
   print('     ****     ****  ');
   print('     (  )     (  )  ');
 
@@ -10,6 +16,7 @@ bot(String userInp) {
   print('        _____/   ');
 
   print("Hi! Ich bin Botti.Ich bin zwar nicht der klügste aber ich geb alles!");
+ }
   List<String> health = [
     "wie geht es dir?",
     "was geht?",
@@ -42,19 +49,20 @@ bot(String userInp) {
   List<String> actives = [
     "Hast du Hobbies?",
     "Was machst du am liebsten?",
-    "Was trebst so in deiner Freizeit?",
-  ];
-  List<String> sense = [
-    "Was ist der Sinn des Lebens?",
-    "Kennst du die Antwort auf alles Fragen?",
+    "Was treibst so in deiner Freizeit?",
   ];
 
-  while (true) {
-    String userInp = stdin.readLineSync()!.toString();
+  List<String> sense = [
+    "Was ist der Sinn des Lebens?",
+    "Kennst du die Antwort auf alle Fragen?",
+  ];
+
+  void botChat (userInp) {while Bot.isBotRun {
+    //String userInp = stdin.readLineSync()!.toString();
 
     if (userInp.contains("beende") || userInp.contains("Beende")) {
       print("Bis zum nächsten Mal!");
-      break;
+      
     }
 
     // weitere themen können sein... wer hat dich gebaut? ,was machst du?, Hobby?,
@@ -65,10 +73,10 @@ bot(String userInp) {
       print("Mir geht es gut, danke! Und dir?");
     } else if (weather.any((element) => userInp.contains(element))) {
       print("Das Wetter ist heute schön, oder?");
-    } else if (dumb.any((element) => userInp.contains(element))) {
       print("Dumm ist der, der dummes tut ; )... mein lieber Freund! ");
     } else if (actives.any((element) => userInp.contains(element))) {
       print(
+    } else if (dumb.any((element) => userInp.contains(element))) {
           "Ich stricke am liebsten in meiner Freizeit! Die Ruhe und die Ausgeglichenheit dabei");
     } else if (sense.any((element) => userInp.contains(element))) {
       print("42!");
@@ -76,4 +84,5 @@ bot(String userInp) {
       print("Das ist interessant. Kannst du mir mehr darüber erzählen?");
     }
   }
+ }
 }
