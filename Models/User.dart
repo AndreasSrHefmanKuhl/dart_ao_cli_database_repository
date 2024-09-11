@@ -1,14 +1,20 @@
 class User {
   String name;
   String lastName;
-  String password;
   DateTime birthday;
+  String email;
+  String password;
 
   User(
       {required this.name,
       required this.lastName,
       required this.password,
-      required this.birthday});
+      required this.birthday,
+      required this.email});
 }
 
 Map<String, User> profile = {};
+
+void botChat(userInp) {}
+void register(name, lastName, password, birthday, email) {}
+void logIn(email, password) {}
