@@ -11,14 +11,14 @@ class MockDatabase implements DatabaseRepository {
         name: "Andreas",
         password: "passwort",
         lastName: 'Kuhl',
-        birthday: DateTime(87, 30, 10),
+        birthday: DateTime(1987, 30, 10),
         email: 'hefbolzen@gmail.com')
   ];
 
   List<Messages> _messages = [
     Messages(
       sender: '',
-      receiver: '',
+      receiver: '', content: '', timestamp: DateTime.now(), messageType: '',
     )
   ];
 
@@ -45,12 +45,12 @@ class MockDatabase implements DatabaseRepository {
   }
 
   @override
-  bool checkUserCredentials({
-    required String userName,
+  bool checkLogin({
+    required String uEmail,
     required String password,
   }) {
     for (User currentUser in _users) {
-      if (currentUser.userName == userName) {
+      if (currentUser.email== uEmail) {
         if (currentUser.password == password) {
           return true;
         } else {
@@ -86,14 +86,25 @@ class MockDatabase implements DatabaseRepository {
   }
 
   @override
-  void botChat(Bot bot) {
+  void botChat(required String Bot.) {
     // TODO: implement botChat
   }
 
   @override
   void botFace() {
-    // TODO: implement botFace
+    print('     ****     ****  ');
+    print('     (  )     (  )  ');
+
+    print('        /    ');
+    print('       /___    ');
+
+    print('        _____/   ');
+
+    print(
+        "Hi! Ich bin Botti.Ich bin zwar nicht der klügste aber ich geb alles!");
   }
+ 
+  
 
   @override
   void delUser(User user) {
