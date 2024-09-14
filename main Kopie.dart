@@ -1,8 +1,5 @@
 import 'dart:io';
 import 'dart:core';
-import 'bot kopie.dart';
-import 'Data/login_user.dart';
-import 'Data/registry.dart';
 import 'Models/User.dart';
 
 void main() {
@@ -12,19 +9,21 @@ void main() {
   print("Bitte gib deinen Namen ein und dein Password : ) ");
   String userInpOne = stdin.readLineSync()!;
   String userInpTwo = stdin.readLineSync()!;
+  bool isProgrammrunning;
 
   registerUser(userInpOne, userInpTwo);
   loginUser(userInpOne, userInpTwo);
-  bool isProgrammRunning = true;
+  loginUser == true ? isProgrammrunning = true : isProgrammrunning = false;
 
-  while (isProgrammRunning) {
+  while (isProgrammrunning == true) {
     print("Was geht? ; ) (B)eenden... (C)hat... (P)rofil ....  ");
     // warten auf input
     String userChoiceIn = stdin.readLineSync()!;
 
     switch (userChoiceIn) {
       case "b" || "B":
-        isProgrammRunning = false;
+        isProgrammrunning = false;
+        break;
 
       case "c" || "C":
         // Wird zum Chat mit dem Bot geleitet

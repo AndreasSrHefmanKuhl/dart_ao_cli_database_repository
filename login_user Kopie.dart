@@ -2,19 +2,30 @@ import 'Data/login_user.dart';
 import 'Data/registry.dart';
 
 class User {
-  String userName;
-  String password;
+  final String userName;
+  final String password;
 
-  User( this.userName, this.password);
+  User(this.userName, this.password);
 }
 
 // Simulierte Datenbank zum füllen
 Map<String, User> profile = {};
 
-void registry(name,password) 
+void registry(userName, password) {
+  if (profile.containsKey(username)) {
+    print('Benutzername bereits vergeben.');
+    return;
+  }
+
+  profile[userName] = User(userName, password);
+  print('Benutzer erfolgreich registriert.');
+}
 
 
-void registerUser(String username, String password) {
+
+
+
+/*void registerUser(String username, String password) {
   if (profile.containsKey(username)) {
     print('Benutzername bereits vergeben.');
     return;
@@ -22,7 +33,7 @@ void registerUser(String username, String password) {
 
   profile[username] = User(username, password);
   print('Benutzer erfolgreich registriert.');
-}
+}*/
 
 /*bool loginUser(name, password) {
   User? user = profile[name];

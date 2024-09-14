@@ -1,11 +1,10 @@
-import '../models/problem.dart';
+import '../Models/Messages.dart';
 import '../models/user.dart';
-import 'database_repository.dart';
 
 class MockDatabase implements DatabaseRepository {
   // Der Programmierer soll von außen keinen direkten Zugriff haben.
   List<User> _users = [User(userName: "kai", password: "passwort")];
-  List<Problem> _problems = [];
+  List<Messages> _messages = [];
 
   @override
   List<User> getAllUsers() {
