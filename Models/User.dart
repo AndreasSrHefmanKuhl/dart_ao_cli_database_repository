@@ -5,9 +5,7 @@ class User {
 
   User({required this.name, required this.password, required this.email});
 
-  /*void botChat() {}
+  void botChat() {}
   void register() {}
   void logIn() {}
-  void newChat() {}
-  void createChat() {}*/
 }
