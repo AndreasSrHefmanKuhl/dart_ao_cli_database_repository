@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'dart:core';
 import 'Models/User.dart';
+import 'Data/database_repository.dart';
 
 void main() {
 // login User zum Anlegen eines Profils
@@ -30,7 +31,8 @@ void main() {
 
         print('Auf gehts zum Bot:.');
         sleep(Duration(seconds: 1));
-        bot(userChoiceIn); // Botti kan Fragen beantworten, wie es iuhm geht, wie das wetter ist. Fragt ihn doch mal ob er dumm ist ^^
+        botChat(
+            userChoiceIn); // Botti kan Fragen beantworten, wie es iuhm geht, wie das wetter ist. Fragt ihn doch mal ob er dumm ist ^^
       case "p" || "P":
         print("dann wollen wir mal! Auf gehts zu deinem Profil");
         sleep(Duration(seconds: 1));

@@ -1,17 +1,16 @@
 abstract class Messages {
   String sender;
   String receiver;
-  String content;
-  DateTime timestamp;
-  String messageType;
+  
 
-  Messages({
+  Messages(
+    Map<dynamic, String> map, {
     required this.sender,
     required this.receiver,
-    required this.content,
-    required this.timestamp,
-    required this.messageType,
+    
   });
 
-  String get message;
+  sendMsg() {}
+  replyMsg() {}
+  delMsg() {}
 }

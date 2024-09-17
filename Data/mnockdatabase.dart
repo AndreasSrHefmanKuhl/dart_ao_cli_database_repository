@@ -1,6 +1,4 @@
-import '../../Models/Messages.dart';
-import '../../Models/User.dart';
-import '../../Data/database_repository.dart';
+
 
 class MockDatabase implements DatabaseRepository {
   // Der Programmierer soll von außen keinen direkten Zugriff haben.
@@ -25,22 +23,8 @@ class MockDatabase implements DatabaseRepository {
     _users.addAll(newUser);}
 
   @override
-  bool logIn ({
-    required User email,
-    required User password,
-  }) async {
-    for (User currentUser in _users) {
-      if (currentUser.email==  email) {
-        if (currentUser.password == password) {
-          return true; 
-        } else {
-          return false;
-        }
-      }
-    }
-
-    return false;
-  }
+  bool islogIn(){} 
+  
 void registerUser(String name, String password, String email) {
   if (_users.containsKey(name)|| _users.containsKey(password)|| _users.containsKey(email) ) {
     print('Benutzername bereits vergeben.');
