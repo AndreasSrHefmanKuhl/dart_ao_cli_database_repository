@@ -1,1 +1,0 @@
-class MockDatabase implements DatabaseRepository {}
